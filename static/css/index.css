@@ -331,14 +331,52 @@ body {
 }
 
 /* Content Improvements */
-.content.has-text-justified {
-  font-size: 1.1rem;
-  line-height: 1.8;
+.content.has-text-justified,
+.content.has-text-left {
+  font-size: 1.05rem;
+  line-height: 1.55;
   color: var(--text-secondary);
+  text-align-last: left;
 }
 
-.content.has-text-justified p {
+.content.has-text-justified p,
+.content.has-text-left p {
+  margin-bottom: 1rem;
+}
+
+/* Real-world rollouts */
+.rollout-caption {
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
+}
+
+#rollout-tasks .button.is-active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+.rollout-method {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.rollout-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  background: #000;
+}
+
+.rollout-cell.is-ours .rollout-method {
+  color: var(--primary-color);
+}
+
+.rollout-cell.is-ours .rollout-video {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
 /* Footer Improvements */
@@ -651,7 +689,8 @@ code {
     padding: 1rem;
   }
   
-  .content.has-text-justified {
+  .content.has-text-justified,
+  .content.has-text-left {
     font-size: 1rem;
   }
 }
